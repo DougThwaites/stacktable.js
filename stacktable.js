@@ -69,11 +69,13 @@
         markup += '<table class=" '+ table_css +' stacktable small-only"><tbody>' + headMarkup + bodyMarkup + '</tbody></table>';
       });
 
+      markup += '<div class="small-only tfoot"><table class="'+ table_css + ' stacktable small-only"><tbody><tr>';
       $table.find('>tfoot>tr>td').each(function(rowIndex,value) {
         if ($.trim($(value).text()) !== '') {
-          markup += '<table class="'+ table_css + ' stacktable small-only"><tbody><tr><td>' + $(value).html() + '</td></tr></tbody></table>';
+          markup += '<td>' + $(value).html() + '</td>';
         }
       });
+      markup += '</tr></tbody></table></div>';
 
       $stacktable.prepend($caption);
       $stacktable.append($(markup));
