@@ -71,13 +71,13 @@
 
           markup += '<div class="small-only tfoot"><table class="' + table_css + ' stacktable small-only"><tbody>';
           $table.find('>tfoot>tr').each(function (rowIndex, value) {
-              markup += '<tr>--';
+              markup += '<tr>';
               $(this).find('>td').each(function (cellIndex, value) {
                   if ($.trim($(value).text()) !== '') {
                       markup += '<td>' + $(value).html() + '</td>';
                   }
               });
-              markup += '--</tr>';
+              markup += '</tr>';
           });
           markup += '</tbody></table></div>';
 
