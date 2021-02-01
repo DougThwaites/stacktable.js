@@ -69,7 +69,7 @@
               markup += '<table class=" ' + table_css + ' stacktable small-only"><tbody>' + headMarkup + bodyMarkup + '</tbody></table>';
           });
 
-          markup += '<div class="small-only tfoot"><table class="' + table_css + ' stacktable small-only"><tbody>';
+          markup += '<table class="' + table_css + ' stacktable small-only tfoot"><tbody>';
           $table.find('>tfoot>tr').each(function (rowIndex, value) {
               markup += '<tr>';
               $(this).find('>td').each(function (cellIndex, value) {

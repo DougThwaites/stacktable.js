@@ -5,16 +5,14 @@
 This fork modifies tfoot elements in a table to be output as their own (singular) table.
 
 ```
-<div class="small-only tfoot">
-    <table class="{cssOnTable} stacktable small-only">
-        <tbody>
-            <tr>
-                <td>{data}</td>
-                <td>{data}</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+<table class="{cssOnTable} stacktable small-only tfoot">
+    <tbody>
+        <tr>
+            <td>{data}</td>
+            <td>{data}</td>
+        </tr>
+    </tbody>
+</table>
 ```
 
 The number of row and cells match that of the original tfoot.
